@@ -13,3 +13,12 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the DB config
+config/database.yml
+db/schema.rb
+
+.DS_Store
+
+public/system/*
+
