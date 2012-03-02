@@ -14,6 +14,9 @@
 /log/*.log
 /tmp
 
+# Ignore the deploy script
+config/deploy.rb
+
 # Ignore the DB config
 config/database.yml
 db/schema.rb
