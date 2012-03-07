@@ -15,11 +15,11 @@
 /tmp
 
 # Ignore the deploy script
-config/deploy.rb
+#config/deploy.rb
 
 # Ignore the DB config
-config/database.yml
-db/schema.rb
+#config/database.yml
+#db/schema.rb
 
 .DS_Store
 
