@@ -1,40 +1,28 @@
-source 'https://rubygems.org'
+namespace :db do
 
-gem 'rails', '3.2.1'
+  desc "Seed the current environment's database." 
+  task(:seed_data => :environment) do
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+    require 'active_record/fixtures'
 
-gem 'sqlite3'
+    # truncate all tables
+    Country.destroy_all
+    State.destroy_all
+    City.destroy_all
+    Locality.destroy_all
+    Location.destroy_all
+    Category.destroy_all
+    Subcategory.destroy_all
+    Course.destroy_all
+    Institution.destroy_all
 
+    # add data from fixtures
+    Dir.glob(Rails.root.join("db/fixtures/*.csv")).each do |file|
+      puts "importing " << File.basename(file, '.*')
+      Fixtures.create_fixtures('db/fixtures', File.basename(file, '.*'))
+      puts "Successfully imported " << File.basename(file, '.*')
+    end
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+  end
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
-
-  gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the web server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-gem 'capistrano'
-
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
-
-gem 'therubyracer'

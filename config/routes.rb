@@ -1,4 +1,18 @@
 Topgurus::Application.routes.draw do
+  resources :courses
+
+  resources :institutions
+
+  resources :locations
+
+  resources :localities
+
+  resources :cities
+
+  resources :states
+
+  resources :countries
+
   resources :subcategories
 
   resources :categories

@@ -1,0 +1,33 @@
+<h1>Listing localities</h1>
+
+<table>
+  <tr>
+    <th>Country</th>
+    <th>State</th>
+    <th>City</th>
+    <th>Name</th>
+    <th>Lat</th>
+    <th>Lon</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @localities.each do |locality| %>
+  <tr>
+    <td><%= locality.country %></td>
+    <td><%= locality.state %></td>
+    <td><%= locality.city %></td>
+    <td><%= locality.name %></td>
+    <td><%= locality.lat %></td>
+    <td><%= locality.lon %></td>
+    <td><%= link_to 'Show', locality %></td>
+    <td><%= link_to 'Edit', edit_locality_path(locality) %></td>
+    <td><%= link_to 'Destroy', locality, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Locality', new_locality_path %>

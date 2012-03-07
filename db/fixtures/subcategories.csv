@@ -1,0 +1,7 @@
+id,category_id,title,alias,description 
+1,1,Classical Music,music-classical, 
+2,1,Western Music,music-western, 
+3,1,Instrumental Music,music-instrumental, 
+4,2,Painting,arts-painting, 
+5,3,Swimming,sports-swimminag, 
+6,3,Running,sports-running,

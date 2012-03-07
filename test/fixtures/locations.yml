@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  country: 
+  state: 
+  city: 
+  locality: 
+  name: MyString
+  alias: MyString
+  lat: 1.5
+  lon: 1.5
+
+two:
+  country: 
+  state: 
+  city: 
+  locality: 
+  name: MyString
+  alias: MyString
+  lat: 1.5
+  lon: 1.5

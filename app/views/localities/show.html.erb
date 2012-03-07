@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Country:</b>
+  <%= @locality.country %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @locality.state %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%= @locality.city %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%= @locality.name %>
+</p>
+
+<p>
+  <b>Lat:</b>
+  <%= @locality.lat %>
+</p>
+
+<p>
+  <b>Lon:</b>
+  <%= @locality.lon %>
+</p>
+
+
+<%= link_to 'Edit', edit_locality_path(@locality) %> |
+<%= link_to 'Back', localities_path %>

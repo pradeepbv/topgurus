@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  description: MyString
+  duration: MyString
+  schedule: MyString
+  cost: MyString
+  location: 
+  category: 
+  subcategory: 
+  alias: MyString
+
+two:
+  title: MyString
+  description: MyString
+  duration: MyString
+  schedule: MyString
+  cost: MyString
+  location: 
+  category: 
+  subcategory: 
+  alias: MyString

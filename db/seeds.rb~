@@ -1,0 +1,52 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+# Seed the countries table
+Country.create(name: "India")
+
+# Seed the states table
+State.create([
+{country: countries.first, name:"Andaman and Nicobar Islands"},
+{country: countries.first, name:"Andhra Pradesh"},
+{country: countries.first, name:"Arunachal Pradesh"},
+{country: countries.first, name:"Assam"},
+{country: countries.first, name:"Bihar"},
+{country: countries.first, name:"Chandigarh"},
+{country: countries.first, name:"Chhattisgarh"},
+{country: countries.first, name:"Dadra and Nagar Haveli"},
+{country: countries.first, name:"Daman and Diu"},
+{country: countries.first, name:"Delhi"},
+{country: countries.first, name:"Goa"},
+{country: countries.first, name:"Gujarat"},
+{country: countries.first, name:"Haryana"},
+{country: countries.first, name:"Himachal Pradesh"},
+{country: countries.first, name:"Jammu and Kashmir"},
+{country: countries.first, name:"Jharkhand"},
+{country: countries.first, name:"Karnataka"},
+{country: countries.first, name:"Kerala"},
+{country: countries.first, name:"Lakshadweep"},
+{country: countries.first, name:"Madhya Pradesh"},
+{country: countries.first, name:"Maharashtra"},
+{country: countries.first, name:"Manipur"},
+{country: countries.first, name:"Meghalaya"},
+{country: countries.first, name:"Mizoram"},
+{country: countries.first, name:"Nagaland"},
+{country: countries.first, name:"Orissa"},
+{country: countries.first, name:"Pondicherry"},
+{country: countries.first, name:"Punjab"},
+{country: countries.first, name:"Rajasthan"},
+{country: countries.first, name:"Sikkim"},
+{country: countries.first, name:"Tamil Nadu"},
+{country: countries.first, name:"Tripura"},
+{country: countries.first, name:"Uttar Pradesh"},
+{country: countries.first, name:"Uttarakhand"},
+{country: countries.first, name:"West Bengal"}
+])
+
+# Seed the city table
+City.create(name:"Bangalore",country:countries.first,state:state.find_by_name('Karnataka'))
