@@ -28,7 +28,7 @@
     <%= f.text_field :schedule %>
   </div>
   <div class="field">
-    <%= f.label :cost %><br />
+    <%= f.label :fees %><br />
     <%= f.text_field :cost %>
   </div>
   <div class="field">
@@ -37,11 +37,11 @@
   </div>
   <div class="field">
     <%= f.label :category %><br />
-    <%= f.text_field :category %>
+    <%= f.collection_select :category_id, Category.find(:all, :order => :title), :id, :title, {:prompt => true} %>
   </div>
   <div class="field">
     <%= f.label :subcategory %><br />
-    <%= f.text_field :subcategory %>
+    <%= f.collection_select :subcategory_id, Subcategory.find(:all, :order => :title), :id, :title, {:prompt => true} %>
   </div>
   <div class="field">
     <%= f.label :alias %><br />
